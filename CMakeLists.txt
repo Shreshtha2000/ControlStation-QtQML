@@ -9,7 +9,7 @@ set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/)
 set(QML_IMPORT_PATH ${CMAKE_BINARY_DIR}/ CACHE STRING "Extra QML Import Paths" FORCE)
 set(QT_QML_GENERATE_QMLLS_INI ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick Qml Core5Compat)
 
 
 qt_add_executable(appGCS
@@ -38,6 +38,8 @@ set_target_properties(appGCS PROPERTIES
 target_link_libraries(appGCS
     PRIVATE
     Qt6::Quick
+    Qt6::Qml
+    Qt6::Core5Compat
     UI
     UIplugin
     Layout

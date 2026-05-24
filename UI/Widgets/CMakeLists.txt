@@ -14,4 +14,5 @@ qt_add_qml_module(Widgets
         QML_FILES ToolsWidget.qml
         QML_FILES GPSIndicator.qml
         QML_FILES FlightTimeIndicator.qml
+        QML_FILES VehicleDataDisplayUnit.qml
 )
