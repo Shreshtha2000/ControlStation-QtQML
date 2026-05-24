@@ -5,14 +5,7 @@ import GCS.UI.Widgets
 Item {
     height: 50
     width: parent.width
-    property double marginsLeft: 5
-    property double marginsRight: 5
-    property double marginsTop: 5
-    property double marginsBottom: 5
-    property double marginsAll: 5
-    property double colSpacing: 1
-    property double rowSpacing: 5
-    property double spacerWidth: 0.5
+
 
     Rectangle{
         id: _headerRoot

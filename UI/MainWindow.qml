@@ -11,6 +11,15 @@ Window {
     [28.66,77.22],
     [28.55,77.21]
     ]
+
+    property double marginsLeft: 5
+    property double marginsRight: 5
+    property double marginsTop: 5
+    property double marginsBottom: 5
+    property double marginsAll: 5
+    property double colSpacing: 1
+    property double rowSpacing: 5
+    property double spacerWidth: 0.5
     MapView{
         anchors.fill: parent
         WaypointItem{
@@ -30,7 +39,7 @@ Window {
         id: missionPanel
         anchors.left: parent.left
         anchors.top: headerBar.bottom
-        height: parent.height - headerBar.height
+        // height: parent.height - headerBar.height
     }
     RightToolBar{
         anchors.right: parent.right

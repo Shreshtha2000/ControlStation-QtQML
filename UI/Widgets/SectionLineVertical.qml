@@ -8,10 +8,6 @@ Item{
         anchors.fill: parent
         color: "white"
         opacity: 0.4
-        Component.onCompleted: {
-            console.log(width, height)
-            console.log(x,y)
-        }
     }
 }
 
