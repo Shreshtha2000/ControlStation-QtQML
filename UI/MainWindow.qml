@@ -42,10 +42,16 @@ Window {
         // height: parent.height - headerBar.height
     }
     RightToolBar{
+        id: rightToolBar
         anchors.right: parent.right
         anchors.top: headerBar.bottom
-        height: parent.height - headerBar.height
+        // height: parent.height - headerBar.height
     }
+    CameraActionsToolBar{
+        anchors.right: rightToolBar.left
+        anchors.top: headerBar.bottom
+    }
+
     CameraPreview{
         anchors.left: missionPanel.right
         anchors.bottom: parent.bottom

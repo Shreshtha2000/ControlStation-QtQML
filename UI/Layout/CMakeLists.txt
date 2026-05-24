@@ -10,4 +10,5 @@ qt_add_qml_module(Layout
         QML_FILES RightToolBar.qml
         QML_FILES CameraPreview.qml
         QML_FILES BottomHUD.qml
+        QML_FILES CameraActionsToolBar.qml
     )
