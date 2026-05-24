@@ -55,7 +55,6 @@ Window {
     CameraPreview{
         anchors.left: missionPanel.right
         anchors.bottom: parent.bottom
-        height: 100
     }
     BottomHUD{
         anchors.bottom: parent.bottom
