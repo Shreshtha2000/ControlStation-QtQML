@@ -23,11 +23,14 @@ Window {
     }
 
     HeaderBar{
+        id: headerBar
         anchors.top: parent.top
     }
     LeftMissionPanel {
         id: missionPanel
         anchors.left: parent.left
+        anchors.top: headerBar.bottom
+        height: parent.height - headerBar.height
     }
     RightToolBar{
         anchors.right: parent.right

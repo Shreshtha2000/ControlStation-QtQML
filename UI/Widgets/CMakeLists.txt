@@ -10,4 +10,5 @@ qt_add_qml_module(Widgets
         QML_FILES SignalStrengthIndicator.qml
         QML_FILES BatteryIndicator.qml
         QML_FILES StatusIndicator.qml
+        QML_FILES SectionLineVertical.qml
 )
