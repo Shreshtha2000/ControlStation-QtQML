@@ -48,7 +48,7 @@ Item {
     SectionLineVertical{
         id: statusBreakLine1
         height: connectionStatusRect.height * 0.8
-        anchors.right: connectionStatusRect.right
+        anchors.left: connectionStatusRect.right
         anchors.verticalCenter: connectionStatusRect.verticalCenter
     }
 

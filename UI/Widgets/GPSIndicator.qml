@@ -1,44 +1,44 @@
 import QtQuick 2.15
 import QtQuick.Layouts
 Item {
-    height: signalStrengthRect.implicitHeight
-    width: signalStrengthRect.width
+    height: gpsCountRect.implicitHeight
+    width: gpsCountRect.width
     Rectangle{
-        id: signalStrengthRect
-        height: signalStrengthStatusLayout.height*1.2
-        width: signalStrengthStatusLayout.width*1.2
+        id: gpsCountRect
+        height: gpsCountStatusLayout.height*1.2
+        width: gpsCountStatusLayout.width*1.2
         color: "transparent"
         anchors.verticalCenter: parent.verticalCenter
         Row{
-            id: signalStrengthStatusLayout
+            id: gpsCountStatusLayout
             anchors.centerIn: parent
             spacing: rowSpacing
             Rectangle{
-                id: signalStrengthImageRect
+                id: gpsCountImageRect
                 height: 20
                 width: 20
-                color: "white"
+                color: "blue"
                 radius: 5
                 Layout.alignment: Qt.AlignLeft
             }
 
             ColumnLayout{
-                id: signalStrengthLabelCol
+                id: gpsCountLabelCol
                 Layout.alignment: Qt.AlignRight
                 spacing: colSpacing
                 Text {
-                    id: signalStrengthLabel
-                    text: qsTr("RSSI")
-                    color: "#FFFFFF"
-                    font.pixelSize: 8
-                }
-                Text {
-                    id: signalStrengthStatusLabel
-                    text: qsTr("100dbm")
+                    id: gpsCountStatusLabel
+                    text: qsTr("0")
                     color: "#FFFFFF"
                     font.bold: true
                     font.family: "Tahom"
                     font.pixelSize: 10
+                }
+                Text {
+                    id: gpsCountLabel
+                    text: qsTr("Satellites")
+                    color: "#FFFFFF"
+                    font.pixelSize: 8
                 }
 
             }

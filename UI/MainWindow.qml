@@ -3,8 +3,8 @@ import GCS.UI.Layout
 import GCS.UI.Map
 import QtPositioning
 Window {
-    width: 640
-    height: 480
+    width: 1280
+    height: 720
     visible: true
     title: qsTr("Hello World")
     property var coordsList: [
@@ -34,6 +34,8 @@ Window {
     }
     RightToolBar{
         anchors.right: parent.right
+        anchors.top: headerBar.bottom
+        height: parent.height - headerBar.height
     }
     CameraPreview{
         anchors.left: missionPanel.right

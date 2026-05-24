@@ -11,4 +11,7 @@ qt_add_qml_module(Widgets
         QML_FILES BatteryIndicator.qml
         QML_FILES StatusIndicator.qml
         QML_FILES SectionLineVertical.qml
+        QML_FILES ToolsWidget.qml
+        QML_FILES GPSIndicator.qml
+        QML_FILES FlightTimeIndicator.qml
 )
