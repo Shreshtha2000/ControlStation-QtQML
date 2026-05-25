@@ -9,7 +9,8 @@ Item {
     anchors.bottomMargin: marginsBottom*2
 
     Rectangle{
-        height: parent.height*1.2
+        id: compassOverlay
+        height: parent.height*1.3
         width: height
         radius: width/2
         anchors.centerIn: parent
@@ -51,10 +52,62 @@ Item {
         }
     }
 
-    VehicleDataDisplayUnit{
+    VehicleDataWidgetColumn{
+        id: leftSideColumn
+        anchors.right: compassOverlay.left
+        anchors.bottom: parent.bottom
+        anchors.rightMargin: marginsRight
+        dataValue1:  "0000"
+        dataValue2:  "0000"
+        dataUnit1:   "m"
+        dataUnit2:   "m"
+        reverse:     true
+    }
 
-        anchors.left: hudWidget.right
-        anchors.horizontalCenter: hudWidget.horizontalCenter
+    VehicleDataWidgetColumn{
+        id: rightSideColumn
+        anchors.left: compassOverlay.right
+        anchors.bottom: parent.bottom
+        anchors.leftMargin: marginsLeft
+        dataValue1:  "0000"
+        dataValue2:  "0000"
+        dataUnit1:   "m"
+        dataUnit2:   "m"
+        reverse:     false
+    }
+
+    TelemDataLargeWidget{
+        anchors.right: compassOverlay.left
+        anchors.top: hudWidget.top
+        height: 30
+        width: 80
+        reverse: true
+        dataValue: 0.0
+        dataHeading: "SPD"
+        dataUnit: "m/s"
+    }
+
+    TelemDataLargeWidget{
+        anchors.left: compassOverlay.right
+        anchors.top: hudWidget.top
+        height: 30
+        width: 80
+        reverse: false
+        dataValue: 0.0
+        dataHeading: "ALT"
+        dataUnit: "m"
+    }
+
+    TelemDataLargeWidget{
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: compassOverlay.top
+        anchors.bottomMargin: marginsBottom
+        height: 30
+        width: 100
+        reverse: true
+        dataValue: 360
+        dataHeading: "Deg"
+        dataUnit: ""
     }
 
 
