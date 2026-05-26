@@ -15,27 +15,59 @@ Rectangle {
         Rectangle{ //Bluetooth icon
             height: parent.height
             width: height
-            color: "blue"
+            color: "transparent"
             radius: 50
+            Image {
+                height: parent.height*0.8
+                width: height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+                id: bluetoothImg
+                source: "qrc:/bluetooth.png"
+            }
         }
 
         Rectangle{ //notification
             height: parent.height
             width: height
-            color: "white"
+            color: "transparent"
             radius: 50
+            Image {
+                id: notificationImg
+                height: parent.height*0.8
+                width: height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/notification.png"
+            }
         }
         Rectangle{ //Qr
             height: parent.height
             width: height
-            color: "red"
+            color: "transparent"
             radius: 50
+            Image {
+                id: qrImg
+                height: parent.height*0.8
+                width: height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/qr.png"
+            }
         }
         Rectangle{ //Settings
             height: parent.height
             width: height
-            color: "green"
+            color: "transparent"
             radius: 50
+            Image {
+                id: settings2Img
+                height: parent.height
+                width: height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/settings_2.png"
+            }
         }
     }
 }

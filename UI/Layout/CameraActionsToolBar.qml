@@ -92,6 +92,15 @@ Item {
                         width: height
                         radius: 50
                         anchors.horizontalCenter: parent.horizontalCenter
+                        color:"transparent"
+                        Image {
+                            id: aeLockImg
+                            height: parent.height*0.8
+                            width: height
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                            source: "qrc:/lock.png"
+                        }
                     }
                 }
 
@@ -139,6 +148,15 @@ Item {
                         width: height
                         radius: 50
                         anchors.horizontalCenter: parent.horizontalCenter
+                        color:"transparent"
+                        Image {
+                            id: captureModeImg
+                            height: parent.height*0.8
+                            width: height
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                            source: "qrc:/night.png"
+                        }
                     }
                     Text {
                         id: captureModeHeadingLabel
@@ -171,6 +189,15 @@ Item {
                         width: height
                         radius: 50
                         anchors.horizontalCenter: parent.horizontalCenter
+                        color:"transparent"
+                        Image {
+                            id: optimiserImg
+                            height: parent.height*0.8
+                            width: height
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                            source: "qrc:/scene.png"
+                        }
                     }
                     Text {
                         id: optimiserHeadingLabel
@@ -235,6 +262,15 @@ Item {
                         width: height
                         radius: 50
                         anchors.horizontalCenter: parent.horizontalCenter
+                        color: "transparent"
+                        Image {
+                            id: cameraModeImg
+                            height: parent.height
+                            width: height
+                            anchors.centerIn: parent
+                            fillMode: Image.PreserveAspectFit
+                            source: "qrc:/auto_cam.png"
+                        }
                     }
                 }
 

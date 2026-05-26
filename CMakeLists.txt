@@ -8,12 +8,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(QT_QML_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/)
 set(QML_IMPORT_PATH ${CMAKE_BINARY_DIR}/ CACHE STRING "Extra QML Import Paths" FORCE)
 set(QT_QML_GENERATE_QMLLS_INI ON)
-
+set(CMAKE_AUTORCC ON)
 find_package(Qt6 REQUIRED COMPONENTS Quick Qml Core5Compat)
 
 
 qt_add_executable(appGCS
     main.cpp
+    UI/resources/gcsimages.qrc
 )
 add_subdirectory(UI)
 # qt_add_qml_module(appGCS

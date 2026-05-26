@@ -31,17 +31,26 @@ Item {
         height: videoRect.visible ? 240: visiblityBtn.height*2
         width: height*16/9
         color: "transparent"
+        radius: 6
 
         Rectangle{//image rect
             id: videoRect
             anchors.fill: parent
-            color: "green"
+            color: "transparent"
             radius: 6
             visible: true
+            Image {
+                id: sceneryImg
+                anchors.fill: parent
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectCrop
+                source: "qrc:/scenerey.jpg"
+            }
             Rectangle{//grey overlay
                 anchors.fill: parent
                 color: "#0A0A0A"
                 opacity: 0.5
+                radius: 6
             }
         }
 
@@ -49,11 +58,19 @@ Item {
             id:visiblityBtn
             height: 20
             width: height
-            color: "white"
+            color: videoRect.visible ?"transparent" : "#0A0A0A"
             anchors.top: parent.top
             anchors.left: parent.left
             radius: 50
             anchors.margins: marginsAll
+            Image {
+                id: hideImg
+                height: parent.height*0.9
+                width: height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/hide.png"
+            }
             MouseArea{
                 anchors.fill: parent
                 onClicked: {

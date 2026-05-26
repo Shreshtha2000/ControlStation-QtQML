@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="arrow_down.png">icons/arrow_down.png</file>
+        <file alias="arrow_left.png">icons/arrow_left.png</file>
+        <file alias="arrow_right.png">icons/arrow_right.png</file>
+        <file alias="arrow_up.png">icons/arrow_up.png</file>
+        <file alias="auto_cam.png">icons/auto_cam.png</file>
+        <file alias="bluetooth.png">icons/bluetooth.png</file>
+        <file alias="camera.png">icons/camera.png</file>
+        <file alias="clock.png">icons/clock.png</file>
+        <file alias="compass.png">icons/compass.png</file>
+        <file alias="compass_out.png">icons/compass_out.png</file>
+        <file alias="console.png">icons/console.png</file>
+        <file alias="distance_to.png">icons/distance_to.png</file>
+        <file alias="expand_dot.png">icons/expand_dot.png</file>
+        <file alias="gimbal_cam.png">icons/gimbal_cam.png</file>
+        <file alias="hide.png">icons/hide.png</file>
+        <file alias="home.png">icons/home.png</file>
+        <file alias="hud_pitch.png">icons/hud_pitch.png</file>
+        <file alias="lock.png">icons/lock.png</file>
+        <file alias="manual_camera.png">icons/manual_camera.png</file>
+        <file alias="mission_icon.png">icons/mission_icon.png</file>
+        <file alias="night.png">icons/night.png</file>
+        <file alias="notification.png">icons/notification.png</file>
+        <file alias="qr.png">icons/qr.png</file>
+        <file alias="ready.png">icons/ready.png</file>
+        <file alias="record.png">icons/record.png</file>
+        <file alias="sattellite.png">icons/sattellite.png</file>
+        <file alias="scene.png">icons/scene.png</file>
+        <file alias="settings.png">icons/settings.png</file>
+        <file alias="settings_2.png">icons/settings_2.png</file>
+        <file alias="shutter.png">icons/shutter.png</file>
+        <file alias="signal.png">icons/signal.png</file>
+        <file alias="status.png">icons/status.png</file>
+        <file alias="stop.png">icons/stop.png</file>
+        <file alias="velocity.png">icons/velocity.png</file>
+        <file alias="video.png">icons/video.png</file>
+        <file alias="viewVideo.png">icons/viewVideo.png</file>
+        <file alias="scenerey.jpg">images/scenerey.jpg</file>
+    </qresource>
+</RCC>

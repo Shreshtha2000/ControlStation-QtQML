@@ -16,10 +16,21 @@ Item {
         anchors.centerIn: parent
         color: "transparent"
         Rectangle{
-            anchors.fill: parent
+            height: parent.height*0.9
+            width: height
+            anchors.centerIn: parent
             color: "#0A0A0A"
-            opacity: 0.6
+            opacity: 0.4
             radius: width/2
+
+        }
+        Image {
+            id: outerCompassImg
+            height: parent.height*0.9
+            width: height
+            anchors.centerIn: parent
+            fillMode: Image.PreserveAspectFit
+            source: "qrc:/compass_out.png"
         }
     }
     Rectangle{
@@ -42,6 +53,14 @@ Item {
             anchors.fill: parent
             visible: false
             roll: 0
+            Image {
+                id: hud_pitchImg
+                height: parent.height*0.9
+                width: height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+                source: "qrc:/hud_pitch.png"
+            }
         }
 
         OpacityMask {
@@ -62,6 +81,8 @@ Item {
         dataUnit1:   "m"
         dataUnit2:   "m"
         reverse:     true
+        url1: "qrc:/home.png"
+        url2: "qrc:/console.png"
     }
 
     VehicleDataWidgetColumn{
@@ -74,6 +95,8 @@ Item {
         dataUnit1:   "m"
         dataUnit2:   "m"
         reverse:     false
+        url1: "qrc:/distance_to.png"
+        url2: "qrc:/velocity.png"
     }
 
     TelemDataLargeWidget{

@@ -17,9 +17,17 @@ Item {
                 id: signalStrengthImageRect
                 height: 20
                 width: 20
-                color: "white"
+                color: "transparent"
                 radius: 5
                 Layout.alignment: Qt.AlignLeft
+                Image {
+                    id: signalStrenthImg
+                    height: parent.height
+                    width: height
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                    source: "qrc:/signal.png"
+                }
             }
 
             ColumnLayout{

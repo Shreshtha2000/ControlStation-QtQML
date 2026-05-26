@@ -18,9 +18,17 @@ Item {
                 id: imageRect
                 height: 20
                 width: 20
-                color: "green"
+                color: "transparent"
                 radius: 50
                 Layout.alignment: Qt.AlignLeft
+                Image {
+                    id: connectedImg
+                    height: parent.height
+                    width: height
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                    source: "qrc:/ready.png"
+                }
             }
 
             ColumnLayout{
@@ -67,9 +75,17 @@ Item {
                 id: missionStatusImageRect
                 height: 20
                 width: 20
-                color: "green"
+                color: "transparent"
                 radius: 50
                 Layout.alignment: Qt.AlignLeft
+                Image {
+                    id: statusImg
+                    height: parent.height
+                    width: height
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                    source: "qrc:/status.png"
+                }
             }
 
             ColumnLayout{

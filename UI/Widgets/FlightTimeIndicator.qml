@@ -40,9 +40,17 @@ Item {
                 id: flightTimeImageRect
                 height: 20
                 width: 20
-                color: "blue"
+                color: "transparent"
                 radius: 5
                 Layout.alignment: Qt.AlignLeft
+                Image {
+                    id: clockImg
+                    height: parent.height
+                    width: height
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                    source: "qrc:/clock.png"
+                }
             }
 
             ColumnLayout{

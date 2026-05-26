@@ -17,9 +17,17 @@ Item {
                 id: gpsCountImageRect
                 height: 20
                 width: 20
-                color: "blue"
+                color: "transparent"
                 radius: 5
                 Layout.alignment: Qt.AlignLeft
+                Image {
+                    id: gpsImg
+                    height: parent.height
+                    width: height
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                    source: "qrc:/sattellite.png"
+                }
             }
 
             ColumnLayout{

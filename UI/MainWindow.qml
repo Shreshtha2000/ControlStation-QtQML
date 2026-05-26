@@ -1,7 +1,9 @@
 import QtQuick
 import GCS.UI.Layout
 import GCS.UI.Map
+import GCS.UI.Widgets
 import QtPositioning
+
 Window {
     width: 1280
     height: 720
@@ -55,9 +57,16 @@ Window {
     CameraPreview{
         anchors.left: missionPanel.right
         anchors.bottom: parent.bottom
+        anchors.margins: marginsAll*2
     }
     BottomHUD{
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
+    }
+    CompassWidget{
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        anchors.margins: marginsAll*2
+        height: 40
     }
 }

@@ -41,6 +41,15 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 width: height
                 radius: width/2
+                color:"transparent"
+                Image {
+                    id: dataImg
+                    height: parent.height
+                    width: height
+                    anchors.centerIn: parent
+                    fillMode: Image.PreserveAspectFit
+                    source: dataIconUrl
+                }
             }
         }
     }
