@@ -69,4 +69,9 @@ Window {
         anchors.margins: marginsAll*2
         height: 40
     }
+    JoystickWidget{
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        anchors.margins: marginsAll*20
+    }
 }
