@@ -5,8 +5,9 @@ import GCS.UI.Widgets
 
 Item {
     id: _missionPanelRoot
+    property real availableWidth: 300
     property int missionValue: 20
-    property int progressWidth: 200
+    property int progressWidth: Math.max(parent.width*0.125,140)
     property int progressHeight: 6
     property string missionName: "Default_Mission_1"
     anchors.margins: marginsAll
@@ -87,7 +88,7 @@ Item {
 
         Rectangle {
             id: missionDetailsRect
-            width: missionDetailsRowLayout.implicitWidth*1
+            width: Math.min(availableWidth, missionDetailsRowLayout.implicitWidth)
             height: missionDetailsRowLayout.implicitHeight*1.2
             anchors.top: missionProgressRect.bottom
             anchors.margins: marginsAll * 2
@@ -97,54 +98,59 @@ Item {
                 color:"#0A0A0A"
                 radius: 5
             }
-
-
-            Row{
-                id: missionDetailsRowLayout
-                // Layout.alignment: Qt.AlignVCenter
-                anchors.verticalCenter: parent.verticalCenter
-                // Layout.margins: marginsAll
-                anchors.margins: marginsAll
-                // width: parent.width
-                spacing: rowSpacing
-                Repeater{
-                    id: missionDetailsRepeater
-                    model: missionDetails
-                    delegate: Rectangle{
-                        height: missionStatusLabelCol.implicitHeight*1.2
-                        width: missionStatusLabelCol.implicitWidth*1.3
-                        anchors.verticalCenter: parent.verticalCenter
-                        // Layout.margins: marginsAll*0.5
-                        color: "transparent"
-                        Column{
-                            id: missionStatusLabelCol
-                            // Layout.alignment: Qt.AlignVCenter
+            Flickable{
+                height: parent.height
+                width: parent.width
+                contentWidth: missionDetailsRowLayout.implicitWidth
+                flickableDirection: Flickable.HorizontalFlick
+                clip: true
+                Row{
+                    id: missionDetailsRowLayout
+                    // Layout.alignment: Qt.AlignVCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    // Layout.margins: marginsAll
+                    anchors.margins: marginsAll
+                    // width: parent.width
+                    spacing: rowSpacing
+                    Repeater{
+                        id: missionDetailsRepeater
+                        model: missionDetails
+                        delegate: Rectangle{
+                            height: missionStatusLabelCol.implicitHeight*1.2
+                            width: missionStatusLabelCol.implicitWidth*1.3
                             anchors.verticalCenter: parent.verticalCenter
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.left: parent.left
-                            spacing: colSpacing
-                            Text {
-                                id: missionHeadingLabel
-                                text: qsTr(modelData.heading)
+                            // Layout.margins: marginsAll*0.5
+                            color: "transparent"
+                            Column{
+                                id: missionStatusLabelCol
+                                // Layout.alignment: Qt.AlignVCenter
+                                anchors.verticalCenter: parent.verticalCenter
                                 anchors.horizontalCenter: parent.horizontalCenter
-                                color: "#FFFFFF"
-                                font.pixelSize: 8
+                                anchors.left: parent.left
+                                spacing: colSpacing
+                                Text {
+                                    id: missionHeadingLabel
+                                    text: qsTr(modelData.heading)
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    color: "#FFFFFF"
+                                    font.pixelSize: 8
+                                }
+                                Text {
+                                    id: missionValueStatusLabel
+                                    text: qsTr(modelData.value)
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    color: "#FFFFFF"
+                                    font.bold: true
+                                    font.family: "Tahom"
+                                    font.pixelSize: 10
+                                }
                             }
-                            Text {
-                                id: missionValueStatusLabel
-                                text: qsTr(modelData.value)
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                color: "#FFFFFF"
-                                font.bold: true
-                                font.family: "Tahom"
-                                font.pixelSize: 10
+                            SectionLineVertical{
+                                anchors.right: parent.right
+                                height: parent.height*0.7
+                                anchors.verticalCenter: parent.verticalCenter
                             }
                         }
-                       SectionLineVertical{
-                           anchors.right: parent.right
-                           height: parent.height*0.7
-                            anchors.verticalCenter: parent.verticalCenter
-                       }
                     }
                 }
             }

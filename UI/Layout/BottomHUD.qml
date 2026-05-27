@@ -4,7 +4,7 @@ import QtQuick.Effects
 import Qt5Compat.GraphicalEffects
 
 Item {
-    height: 100
+    height: Math.min(Math.max(parent.height*0.15, 80),Math.max(parent.width*0.1, 80))
     width: height
     anchors.bottomMargin: marginsBottom*2
 

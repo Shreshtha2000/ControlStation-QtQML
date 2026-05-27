@@ -12,6 +12,7 @@ Item {
         id: dataDisplayRect
         height: parent.height
         width: parent.width
+        color: "transparent"
         Rectangle {
             anchors.fill: parent
             color: "#0A0A0A"

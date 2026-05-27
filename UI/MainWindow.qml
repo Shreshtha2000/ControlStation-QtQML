@@ -71,23 +71,29 @@ Window {
         id: missionPanel
         anchors.left: parent.left
         anchors.top: headerBar.bottom
+        availableWidth: parent.width*0.3
         // height: parent.height - headerBar.height
     }
     RightToolBar{
         id: rightToolBar
         anchors.right: parent.right
         anchors.top: headerBar.bottom
-        // height: parent.height - headerBar.height
+        availableHeight: (parent.height - headerBar.height)*0.7
+        width: 50
+
     }
     CameraActionsToolBar{
         anchors.right: rightToolBar.left
         anchors.top: headerBar.bottom
+        height: 50
+        availableWidth: parent.width*0.4
     }
 
     CameraPreview{
         anchors.left: missionPanel.right
         anchors.bottom: parent.bottom
         anchors.margins: marginsAll*2
+        // availableHeight: parent.height*0.3
     }
     BottomHUD{
         anchors.bottom: parent.bottom

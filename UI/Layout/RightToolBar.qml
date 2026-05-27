@@ -1,10 +1,12 @@
 import QtQuick
 
 Item {
-    // height: parent.height
+    property real availableHeight: 400
+    height: Math.min(rightToolBarIconsCol.height, availableHeight)
     // width: 20
-    height: rightToolBarRect.height
-    width: rightToolBarRect.width
+    // width: rightToolbarFlick.width
+    // width: rightToolBarRect.width
+
     anchors.topMargin: marginsTop
     property var rightToolBarIconsUrlList: [
         "qrc:/shutter.png",
@@ -20,8 +22,8 @@ Item {
         // anchors.fill: parent
         id: rightToolBarRect
         color: "transparent"
-        height: rightToolBarIconsCol.implicitHeight*1.1
-        width: rightToolBarIconsCol.implicitWidth*1.2
+        height:parent.height
+        width: parent.width
         Rectangle{
             anchors.fill: parent
             color: "#0A0A0A"
@@ -31,18 +33,25 @@ Item {
             bottomLeftRadius: 10
         }
 
-        Column{
-            id: rightToolBarIconsCol
-            spacing: colSpacing*12
-            anchors.centerIn: parent
-            Repeater{
-                model: rightToolBarIconsUrlList
-                delegate: Rectangle{
-                    height: 40
-                    width: 40
-                    radius: 50
-                    color: "transparent"
-                    Image {
+        Flickable{
+            id: rightToolbarFlick
+            height: parent.height
+            width: parent.width
+            flickableDirection: Flickable.VerticalFlick
+            contentHeight: rightToolBarIconsCol.height
+            clip: true
+            Column{
+                id: rightToolBarIconsCol
+                spacing: colSpacing*12
+                anchors.centerIn: parent
+                Repeater{
+                    model: rightToolBarIconsUrlList
+                    delegate: Rectangle{
+                        height: 40
+                        width: 40
+                        radius: 50
+                        color: "transparent"
+                        Image {
                             id: rightToolbarImg
                             height: parent.height*0.8
                             width: height
@@ -50,14 +59,14 @@ Item {
                             fillMode: Image.PreserveAspectFit
                             source: modelData
                         }
+                    }
                 }
-            }
 
-            Rectangle{
-                height: 20
-                width: 40
-                color: "transparent"
-                Image {
+                Rectangle{
+                    height: 20
+                    width: 40
+                    color: "transparent"
+                    Image {
                         id: expandImg
                         height: parent.height
                         width: height
@@ -65,8 +74,10 @@ Item {
                         fillMode: Image.PreserveAspectFit
                         source: "qrc:/expand_dot.png"
                     }
+                }
             }
         }
     }
+
 
 }

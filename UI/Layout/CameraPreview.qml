@@ -3,6 +3,7 @@ import QtQuick 2.15
 Item {
     property string timerSpent: "00:00:00"
     property int timeSpent: 0
+    property real availableHeight: Math.min(parent.height*0.3, parent.width*0.2)
     height: cameraPreviewRect.height
     width: cameraPreviewRect.width
     function totalTimeCalculator(totalSeconds){
@@ -28,7 +29,7 @@ Item {
 
     Rectangle{
         id: cameraPreviewRect
-        height: videoRect.visible ? 240: visiblityBtn.height*2
+        height: videoRect.visible ? availableHeight : visiblityBtn.height*2
         width: height*16/9
         color: "transparent"
         radius: 6

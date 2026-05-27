@@ -24,6 +24,12 @@ Current Version show cases the main action page, which contains:
 10. Vehicle Current Location
 11. Vehicle overlay trail
 
+## Responsive Design
+
+This version of GCS is now responsive to both scale up and down, via the use of Flickables
+
+![Responsive Design](assets/ResponsiveDesign.gif)
+
 ## Folder Structure
 
 ```text

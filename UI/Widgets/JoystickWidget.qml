@@ -1,8 +1,8 @@
 import QtQuick 2.15
 
 Item {
-    height: 150
-    width: 150
+    height: Math.min(Math.max(parent.height*0.15, 80),Math.max(parent.width*0.1, 80))
+    width: height
     Rectangle{
         id: _joystickRoot
         anchors.fill: parent
@@ -31,7 +31,7 @@ Item {
             }
             Text {
                 text: qsTr("Actions")
-                font.pixelSize: 20
+                font.pointSize: parent.width*0.2
                 color: "white"
                 anchors.centerIn: parent
             }
