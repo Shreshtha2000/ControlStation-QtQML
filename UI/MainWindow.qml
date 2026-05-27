@@ -8,7 +8,7 @@ Window {
     width: 1280
     height: 720
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("GCS")
     property var missionPathList: [
         [28.4565381, 77.1264300],
         [28.4618964, 77.1265372],
