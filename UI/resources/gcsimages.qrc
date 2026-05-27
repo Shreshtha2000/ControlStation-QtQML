@@ -14,12 +14,14 @@
         <file alias="distance_to.png">icons/distance_to.png</file>
         <file alias="expand_dot.png">icons/expand_dot.png</file>
         <file alias="gimbal_cam.png">icons/gimbal_cam.png</file>
+        <file alias="gps.png">icons/gps.png</file>
         <file alias="hide.png">icons/hide.png</file>
         <file alias="home.png">icons/home.png</file>
         <file alias="hud_pitch.png">icons/hud_pitch.png</file>
         <file alias="lock.png">icons/lock.png</file>
         <file alias="manual_camera.png">icons/manual_camera.png</file>
         <file alias="mission_icon.png">icons/mission_icon.png</file>
+        <file alias="mission_guide_direction.png">icons/mission_guide_direction.png</file>
         <file alias="night.png">icons/night.png</file>
         <file alias="notification.png">icons/notification.png</file>
         <file alias="qr.png">icons/qr.png</file>
@@ -33,9 +35,11 @@
         <file alias="signal.png">icons/signal.png</file>
         <file alias="status.png">icons/status.png</file>
         <file alias="stop.png">icons/stop.png</file>
+        <file alias="vehicle.png">icons/vehicle.png</file>
         <file alias="velocity.png">icons/velocity.png</file>
         <file alias="video.png">icons/video.png</file>
         <file alias="viewVideo.png">icons/viewVideo.png</file>
+        <!-- Jpg -->
         <file alias="scenerey.jpg">images/scenerey.jpg</file>
     </qresource>
 </RCC>

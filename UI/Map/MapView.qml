@@ -23,8 +23,8 @@ Map {
     plugin: mapPlugin
 
 
-    center: QtPositioning.coordinate(28.64, 77.22) // Delhi
-    zoomLevel: 14
+    center: QtPositioning.coordinate(28.459033019728, 77.1240234375) // Delhi
+    zoomLevel: 16
     property geoCoordinate startCentroid
 
     PinchHandler {

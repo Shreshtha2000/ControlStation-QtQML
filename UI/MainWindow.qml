@@ -9,10 +9,38 @@ Window {
     height: 720
     visible: true
     title: qsTr("Hello World")
-    property var coordsList: [
-    [28.66,77.22],
-    [28.55,77.21]
+    property var missionPathList: [
+        [28.4565381, 77.1264300],
+        [28.4618964, 77.1265372],
+        [28.4618447, 77.1256377],
+        [28.4565982, 77.1255327],
+        [28.4566583, 77.1246354],
+        [28.4617931, 77.1247381],
+        [28.4617414, 77.1238385],
+        [28.4567183, 77.1237381],
+        [28.4567784, 77.1228408],
+        [28.4616897, 77.1229390],
+        [28.4616380, 77.1220394],
+        [28.4568384, 77.1219435],
+        [28.4568985, 77.1210462],
+        [28.4615863, 77.1211398]
     ]
+
+    property var vehicleTrail: [
+        [28.4565381, 77.1264300],
+        [28.4618964, 77.1265372],
+        [28.4618447, 77.1256377],
+        [28.4565982, 77.1255327],
+        [28.4566583, 77.1246354]
+    ]
+
+    property var missionPolygonList: [
+        [28.4562, 77.1270],
+        [28.4620, 77.1270],
+        [28.4619, 77.1204],
+        [28.4570, 77.1204]
+    ]
+    property var vehicleLoc: [28.459222, 77.124694]
 
     property double marginsLeft: 5
     property double marginsRight: 5
@@ -24,13 +52,15 @@ Window {
     property double spacerWidth: 0.5
     MapView{
         anchors.fill: parent
-        WaypointItem{
-            coordinate: QtPositioning.coordinate(28.64, 77.22)
+        MissionOverlay{
+            waypointsCoordinates: missionPathList
+            missionPolygon: missionPolygonList
+        }
+        VehicleMapOverlay{
+            vehicleTrailPoints: vehicleTrail
+            vehicleLocation: vehicleLoc
         }
 
-        MissionOverlay{
-            waypointsCoordinates: coordsList
-        }
     }
 
     HeaderBar{

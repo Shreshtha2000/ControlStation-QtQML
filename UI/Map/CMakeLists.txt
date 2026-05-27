@@ -8,4 +8,8 @@ qt_add_qml_module(Map
         MapView.qml
         QML_FILES MissionOverlay.qml
         QML_FILES WaypointItem.qml
+        QML_FILES LineDirectionIndicatorArrow.qml
+        QML_FILES MapPolygonOverlay.qml
+        QML_FILES VehicleMapItem.qml
+        QML_FILES VehicleMapOverlay.qml
 )

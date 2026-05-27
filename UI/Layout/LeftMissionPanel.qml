@@ -5,7 +5,7 @@ import GCS.UI.Widgets
 
 Item {
     id: _missionPanelRoot
-    property int missionValue: 60
+    property int missionValue: 20
     property int progressWidth: 200
     property int progressHeight: 6
     property string missionName: "Default_Mission_1"
