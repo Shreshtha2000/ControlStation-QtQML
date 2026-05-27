@@ -72,6 +72,6 @@ Window {
     JoystickWidget{
         anchors.bottom: parent.bottom
         anchors.right: parent.right
-        anchors.margins: marginsAll*20
+        anchors.margins: marginsAll*30
     }
 }

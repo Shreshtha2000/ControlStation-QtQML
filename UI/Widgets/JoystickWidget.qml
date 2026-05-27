@@ -29,6 +29,12 @@ Item {
                 x = (_joystickRoot.width - width) / 2
                 y = (_joystickRoot.height - height) / 2
             }
+            Text {
+                text: qsTr("Actions")
+                font.pixelSize: 20
+                color: "white"
+                anchors.centerIn: parent
+            }
             Behavior on x {
                 NumberAnimation {
                     duration: 120
@@ -46,10 +52,10 @@ Item {
                 drag.target: joystick
                 drag.axis: Drag.XAndYAxis
 
-                drag.minimumX: -_joystickRoot.width/2
+                drag.minimumX: -_joystickRoot.width/4
                 drag.maximumX: _joystickRoot.width/2
 
-                drag.minimumY: -_joystickRoot.height/2
+                drag.minimumY: -_joystickRoot.height/4
                 drag.maximumY: _joystickRoot.height/2
                 onReleased: {
                     joystick.centerJoystick()

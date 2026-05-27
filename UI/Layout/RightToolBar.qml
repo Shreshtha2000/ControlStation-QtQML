@@ -52,6 +52,20 @@ Item {
                         }
                 }
             }
+
+            Rectangle{
+                height: 20
+                width: 40
+                color: "transparent"
+                Image {
+                        id: expandImg
+                        height: parent.height
+                        width: height
+                        anchors.centerIn: parent
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:/expand_dot.png"
+                    }
+            }
         }
     }
 
